@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Matchmaker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>CodersSecondDream</h1>
+    <form id="matchForm">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="number" name="age" placeholder="Your Age" required>
+        <select name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <input type="number" name="height" placeholder="Your Height (inches)" required>
+        <div>Preferences:</div>
+        <label><input type="checkbox" name="preferences" value="working"> Working</label>
+        <label><input type="checkbox" name="preferences" value="not working"> Jobless Fool</label>
+        <label><input type="checkbox" name="preferences" value="morning person"> Morning Person</label>
+        <label><input type="checkbox" name="preferences" value="night owl"> Night Owl</label>
+        <label><input type="checkbox" name="preferences" value="boba fein"> Boba Fein</label>
+        <label><input type="checkbox" name="preferences" value="boba hater"> Boba Hater</label>
+        
+        <button type="submit">Find Match</button>
+    </form>
+    <div id="matchResult"></div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
